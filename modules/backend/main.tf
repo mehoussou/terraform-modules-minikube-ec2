@@ -1,6 +1,7 @@
 # Create bucket for backend k8s state files
 resource "aws_s3_bucket" "remote_state_bucket" {
   bucket = var.bucket-name
+  region = var.aws-region
   tags = {
     Name        = var.bucket-name
     Environment = "terraform"
