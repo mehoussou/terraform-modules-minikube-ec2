@@ -34,3 +34,15 @@ You can create separate directories for each environment (i.e. dev, test, prod) 
 |--- prod
 |    |--- main.tf
 ```
+
+To use the remote backend configuration for Terraform on AWS, declare a terraform backend block to utilize these new resources.
+```
+terraform {
+  backend "s3" {
+    bucket         = "example-dev-terraform-state"
+    key            = "dev/terraform.tfstate"
+    region         = "us-east-1"
+    dynamodb_table = "example-dev-terraform-locks"
+  }
+}
+```
