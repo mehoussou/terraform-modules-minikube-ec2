@@ -8,7 +8,7 @@ resource "aws_s3_bucket" "remote_state_bucket" {
 }
 
 # Encrypt remote state bucket with S3 SSE AES256
-resource "aws_s3_bucket_server_side_encryption_configuration" "k8s_bucket_encryption" {
+resource "aws_s3_bucket_server_side_encryption_configuration" "remote_state_bucket_encryption" {
   bucket = aws_s3_bucket.remote_state_bucket.bucket
 
   rule {
@@ -19,7 +19,7 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "k8s_bucket_encryp
 }
 
 # Enable remote backend versioning for roll backs
-resource "aws_s3_bucket_versioning" "k8s_bucket_versioning" {
+resource "aws_s3_bucket_versioning" "remote_state_bucket_versioning" {
   bucket = aws_s3_bucket.remote_state_bucket.id
   versioning_configuration {
     status = "Enabled"
