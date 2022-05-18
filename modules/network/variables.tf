@@ -22,6 +22,3 @@ variable "private-subnet-cidr-b" {
 variable "private-subnet-cidr-c" {
     description = "The cidr range for private subnet c"
 }
-variable "my-ip" {
-    description = "Your home IP address"
-}

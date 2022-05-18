@@ -10,9 +10,8 @@ This Terraform module creates a VPC with the following resources:
 - Three Private Subnets
 - Public Subnet Association with Public Route Table
 - Private Subnet Association with Private Route Table
-- Security Group Allowing SSH from Custom IP Address
 
-Requirements: There are nine variables that you **must** specify in order to provide a valid Terraform configuration:
+Requirements: There are eight variables that you **must** specify in order to provide a valid Terraform configuration:
 
 1. The cidr range for your VPC: `vpc_cidr`
 2. Environment name: `env`
@@ -22,7 +21,6 @@ Requirements: There are nine variables that you **must** specify in order to pro
 6. The cidr range for private subnet a: `private-subnet-cidr-a`
 7. The cidr range for private subnet b: `private-subnet-cidr-b`
 8. The cidr range for private subnet c: `private-subnet-cidr-c`
-9. Your IP Address for SSH Access: `my-ip`
 
 Example usage:
 ```
@@ -37,7 +35,6 @@ module "network" {
   private-subnet-cidr-a = "172.16.3.0/24"
   private-subnet-cidr-b = "172.16.4.0/24"
   private-subnet-cidr-c = "172.16.5.0/24"
-  my-ip                 = "174.51.57.8"
 }
 ```
 
