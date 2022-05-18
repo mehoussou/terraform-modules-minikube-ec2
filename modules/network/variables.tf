@@ -1,8 +1,8 @@
 variable "vpc_cidr" {
-  description = "This is the cidr range for your VPC"
+    description = "This is the cidr range for your VPC"
 }
 variable "env" {
-  description = "Environment name"
+    description = "Environment name"
 }
 variable "public-subnet-cidr-a" {
     description = "The cidr range for public subnet a"
