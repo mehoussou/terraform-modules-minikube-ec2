@@ -144,3 +144,7 @@ resource "aws_route_table_association" "custom_sn_rt_pvt_assoc_c" {
   subnet_id      = aws_subnet.custom_subnet_private_c.id
   route_table_id = aws_route_table.custom_rt_private.id
 }
+
+output "custom_vpc" {
+  value = aws_vpc.custom_vpc.id
+}
