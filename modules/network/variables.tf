@@ -10,9 +10,6 @@ variable "az-b" {
 variable "az-c" {
     description = "Availability Zone C"
 }
-variable "region" {
-    description = "AWS Region"
-}
 variable "public-subnet-cidr-a" {
     description = "The cidr range for public subnet a"
 }
