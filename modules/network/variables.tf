@@ -31,3 +31,6 @@ variable "private-subnet-cidr-b" {
 variable "private-subnet-cidr-c" {
     description = "The cidr range for private subnet c"
 }
+variable "env" {
+    description = "Name of environment"
+}
