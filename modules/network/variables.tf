@@ -1,8 +1,17 @@
 variable "vpc_cidr" {
     description = "This is the cidr range for your VPC"
 }
-variable "env" {
-    description = "Environment name"
+variable "az-a" {
+    description = "Availability Zone A"
+}
+variable "az-b" {
+    description = "Availability Zone B"
+}
+variable "az-c" {
+    description = "Availability Zone C"
+}
+variable "region" {
+    description = "AWS Region"
 }
 variable "public-subnet-cidr-a" {
     description = "The cidr range for public subnet a"

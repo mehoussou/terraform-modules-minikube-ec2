@@ -47,7 +47,7 @@ resource "aws_route" "custom_route_to_igw" {
 resource "aws_subnet" "custom_subnet_public_a" {
   vpc_id                  = aws_vpc.custom_vpc.id
   cidr_block              = var.public-subnet-cidr-a
-  availability_zone       = "us-east-1a"
+  availability_zone       = var.az-a
   map_public_ip_on_launch = true
   tags = {
     Name = "${var.env} Public Subnet A"
@@ -58,7 +58,7 @@ resource "aws_subnet" "custom_subnet_public_a" {
 resource "aws_subnet" "custom_subnet_public_b" {
   vpc_id                  = aws_vpc.custom_vpc.id
   cidr_block              = var.public-subnet-cidr-b
-  availability_zone       = "us-east-1b"
+  availability_zone       = var.az-b
   map_public_ip_on_launch = true
   tags = {
     Name = "${var.env} Public Subnet B"
@@ -69,7 +69,7 @@ resource "aws_subnet" "custom_subnet_public_b" {
 resource "aws_subnet" "custom_subnet_public_c" {
   vpc_id                  = aws_vpc.custom_vpc.id
   cidr_block              = var.public-subnet-cidr-c
-  availability_zone       = "us-east-1c"
+  availability_zone       = var.az-c
   map_public_ip_on_launch = true
   tags = {
     Name = "${var.env} Public Subnet C"
@@ -80,7 +80,7 @@ resource "aws_subnet" "custom_subnet_public_c" {
 resource "aws_subnet" "custom_subnet_private_a" {
   vpc_id                  = aws_vpc.custom_vpc.id
   cidr_block              = var.private-subnet-cidr-a
-  availability_zone       = "us-east-1a"
+  availability_zone       = var.az-a
   map_public_ip_on_launch = true
   tags = {
     Name = "${var.env} Private Subnet A"
@@ -91,7 +91,7 @@ resource "aws_subnet" "custom_subnet_private_a" {
 resource "aws_subnet" "custom_subnet_private_b" {
   vpc_id                  = aws_vpc.custom_vpc.id
   cidr_block              = var.private-subnet-cidr-b
-  availability_zone       = "us-east-1b"
+  availability_zone       = var.az-b
   map_public_ip_on_launch = true
   tags = {
     Name = "${var.env} Private Subnet B"
@@ -102,7 +102,7 @@ resource "aws_subnet" "custom_subnet_private_b" {
 resource "aws_subnet" "custom_subnet_private_c" {
   vpc_id                  = aws_vpc.custom_vpc.id
   cidr_block              = var.private-subnet-cidr-c
-  availability_zone       = "us-east-1c"
+  availability_zone       = var.az-c
   map_public_ip_on_launch = true
   tags = {
     Name = "${var.env} Private Subnet C"
